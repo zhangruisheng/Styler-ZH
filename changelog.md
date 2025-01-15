@@ -1,33 +1,33 @@
-# Changelog
+# 更新日志
 
 ## 1.0.0
 
-- new icon and cover image 🌟
-- added new action called _Extract styles_
-- added UI to customize plugin
-- updated the messages for all notifications
-- now it is possible to get the other properties of a text layer by adding `+` symbol before layer name
-- now is possible to use local styles in order to rename a style. For this, you need to change settings in the _Customize plugin_ section
-- now is possible to change the duration of notifications and cancel it
-- now, only _stroke type_ styles will have suffix
-- now, styles will be created in the same order as layers order (as you see at layers panel from top to bottom)
-- grouped all _remove_ action into a single menu item
-- added logic for changing prefixes and suffixes, but didn't expose to the user (decided at the end that will only create issues between users, as settings are saved on localStorage)
-- refactored the entire code: now there is a class to resolve the inconsistency between layer props and style props
-- used svelte as UI framework (played with it), but unfortunately with webpack, as results there were some drawbacks 😅
+- 新图标和封面图片 🌟
+- 添加了名为 _提取样式_ 的新操作
+- 添加了自定义插件的 UI
+- 更新了所有通知的消息
+- 现在可以通过在图层名称前添加 `+` 符号来获取文本图层的其他属性
+- 现在可以使用本地样式来重命名样式。为此，您需要在 _自定义插件_ 部分更改设置
+- 现在可以更改通知的持续时间并取消它
+- 现在，只有 _描边类型_ 样式会有后缀
+- 现在，样式将按照图层顺序创建（如图层面板从上到下所示）
+- 将所有 _移除_ 操作分组到一个菜单项中
+- 添加了更改前缀和后缀的逻辑，但没有向用户公开（最终决定只会在用户之间产生问题，因为设置保存在 localStorage 中）
+- 重构了整个代码：现在有一个类来解决图层属性和样式属性之间的不一致
+- 使用 svelte 作为 UI 框架（玩了一下），但不幸的是使用了 webpack，结果有一些缺点 😅
 
 ## 0.0.1
 
-- changed clear all styles to `Remove Styles` and now is based on selection
-- changed generate function behaviour -- now it is possible to use another style to update an existing one
-- created changelog file
-- cleanup code (still ugly, but cleaner than before)
+- 将清除所有样式更改为 `移除样式`，现在基于选择
+- 更改了生成函数的行为——现在可以使用另一种样式来更新现有样式
+- 创建了更新日志文件
+- 清理代码（仍然很丑，但比以前更干净）
 
 ## 0.0.0
 
-- added generate styles based on selected layers (create, update, rename)
-- added apply styles that match the layer name
-- added detach styles
-- added remove styles by type
-- added clear all styles (Remove all styles from the document)
-- still defining the features
+- 添加了基于选定图层生成样式（创建、更新、重命名）
+- 添加了匹配图层名称的应用样式
+- 添加了分离样式
+- 添加了按类型移除样式
+- 添加了清除所有样式（从文档中移除所有样式）
+- 仍在定义功能

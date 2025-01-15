@@ -1,77 +1,77 @@
-![cover](assets/cover.png)
+![封面](assets/cover.png)
 
 # Styler
 
-This is a plugin for Figma that generates styles based on selected layers.  
-Basically, you can control your styles by changing layer properties and updating the styles.
+这是一个用于 Figma 的插件，可以根据选定的图层生成样式。  
+基本上，您可以通过更改图层属性并更新样式来控制您的样式。
 
-## Features
+## 功能
 
-### Extract Styles
+### 提取样式
 
-Creates layers based on local styles.  
-This can be useful to transfer style from a project to another, or for libraries that already have styles created, but needs to make bulk changes.
+基于本地样式创建图层。  
+这对于将样式从一个项目转移到另一个项目，或者对于已经创建样式但需要进行批量更改的库非常有用。
 
-> Extract Styles will generate layers in the current page starting at position 0. (you'll be zoomed at the created layers)
+> 提取样式将在当前位置页面从位置 0 开始生成图层。（您将会被放大到创建的图层）
 
-### Generate Styles
+### 生成样式
 
-Is a multi-purpose action for creating, renaming or updating styles based on layer properties.
+这是一个多用途操作，用于根据图层属性创建、重命名或更新样式。
 
-- **Create,** when there is no match between layer and existing styles.
-- **Rename,** when there is a style attached to the layer and no style with desired new name.
-  > It is much faster to use bulk rename feature of figma to rename layers `Cmd` `R` (Mac) or `Ctrl` `R` (Windows).
-  > [More info](https://help.figma.com/hc/en-us/articles/360039958934-Rename-Layers)
-- **Update,** when there is a name match.
+- **创建，** 当图层和现有样式之间没有匹配时。
+- **重命名，** 当图层附加了样式且没有具有所需新名称的样式时。
+  > 使用 Figma 的批量重命名功能 `Cmd` `R`（Mac）或 `Ctrl` `R`（Windows）重命名图层要快得多。
+  > [更多信息](https://help.figma.com/hc/en-us/articles/360039958934-Rename-Layers)
+- **更新，** 当名称匹配时。
 
-### Apply Styles
+### 应用样式
 
-Currently, this action apply the styles based only on layer name and local styles found.
+目前，此操作仅基于图层名称和找到的本地样式应用样式。
 
-### Detach Styles
+### 分离样式
 
-Works on selected layers.
+适用于选定的图层。
 
-### Remove Styles
+### 移除样式
 
-- All Types
-- By Fill Type
-- By Stroke Type
-- By Text Type
-- By Effect Type
-- By Grid Type
+- 所有类型
+- 按填充类型
+- 按描边类型
+- 按文本类型
+- 按效果类型
+- 按网格类型
 
-### Customize plugin
+### 自定义插件
 
-- **Notification timeout:** changes the duration of all notification alerts that appears while interacting with Styler.
-- **Show last style in description:** appends the name of the latest style that was applied to the layer to the current style description.
-  > This is working nice with **Update using local styles** and remote styles that were applied before making the changes.
-- **Update using local styles:** this option will change the behaviour of **Generate Styles** action and as results, local styles can be used as base to modify an existing style.  
-  Is working only with local styles and sometimes produces unexpected results.  
-  For example, if you'll try to rename layers from _layer-01, layer-02, layer-03_ to _layer-00, layer-01, layer-02_, instead of renaming, it will only rename 1 of them, and update the rest.
-- **Extend name match:** also changes the behaviour of **Generate Styles** by looking for a partial name match between layer name and style name, as results will be many styles found.  
-  _Use this with caution._
-- **Texts per column** and **Frames per row** controls the grid of the extracted layers.
-- **Reverse generation layers**: change the order of how styles are created when using **Generate styles**
+- **通知超时：** 更改与 Styler 交互时出现的所有通知警报的持续时间。
+- **在描述中显示最后一个样式：** 将应用于图层的最新样式名称附加到当前样式描述中。
+  > 这与 **使用本地样式更新** 和之前应用的远程样式配合得很好。
+- **使用本地样式更新：** 此选项将更改 **生成样式** 操作的行为，结果是本地样式可以用作修改现有样式的基础。  
+  仅适用于本地样式，有时会产生意想不到的结果。  
+  例如，如果您尝试将图层从 _layer-01, layer-02, layer-03_ 重命名为 _layer-00, layer-01, layer-02_，它将只重命名其中一个，并更新其余的。
+- **扩展名称匹配：** 通过在图层名称和样式名称之间查找部分名称匹配来更改 **生成样式** 的行为，结果会找到许多样式。  
+  _谨慎使用。_
+- **每列文本数** 和 **每行框架数** 控制提取图层的网格。
+- **反向生成图层：** 更改使用 **生成样式** 时创建样式的顺序。
 
-## Known issues
+## 已知问题
 
-1. Some of the **Type details** of the text layers are not saved into the style. This is also a limitation of the API... 😭  
-   **[Fixed]** ~~1. While trying to rename the styles using underscore `_` or point `.` prefixes, the style will not change the publish status (it will not become unpublish). This is a limitation of the API. ☹️~~  
-   **[WIP]** ~~After you create styles, you cannot reorder them using Figma API. 😔~~
+1. 一些文本图层的 **类型详细信息** 未保存到样式中。这也是 API 的限制... 😭  
+   **[已修复]** ~~1. 尝试使用下划线 `_` 或点 `.` 前缀重命名样式时，样式不会更改发布状态（不会变为未发布）。这是 API 的限制。 ☹️~~  
+   **[进行中]** ~~创建样式后，无法使用 Figma API 对其重新排序。 😔~~
 
-## Notes
+## 注意事项
 
-1. Any change can be **Undo**.
-1. Try to avoid same name for multiple layers. It will create a single style, but it will update its properties.
-1. Only **Local Styles** are supported. Still... You can use external styles to update local ones.
-1. There is no support for **Groups** and I don't plan to support it.
-1. For text layers, styler gets only the text properties by default, but now is possible to get other properties by adding `+` as prefix to the layer name.
+1. 任何更改都可以 **撤销**。
+1. 尽量避免多个图层使用相同的名称。它将创建一个样式，但会更新其属性。
+1. 仅支持 **本地样式**。不过... 您可以使用外部样式来更新本地样式。
+1. 不支持 **组**，我也不打算支持。
+1. 对于文本图层，styler 默认仅获取文本属性，但现在可以通过在图层名称前添加 `+` 来获取其他属性。
 
-## Pairing well with
+## 搭配良好
 
 1. [Themer](https://github.com/thomas-lowry/themer)
-1. [Match fills to local styles](https://www.figma.com/community/plugin/783240561193792353/Match-fills-to-local-styles)
+1. [匹配填充到本地样式](https://www.figma.com/community/plugin/783240561193792353/Match-fills-to-local-styles)
 
-Many thanks to [Cristi Nica](https://github.com/cristi9512) for support.  
-Inspired by [Sketch Style Generator](https://github.com/lucaorio/sketch-styles-generator) made by **Luca Orio**.
+非常感谢 [Cristi Nica](https://github.com/cristi9512) 的支持。  
+灵感来自 [Sketch Style Generator](https://github.com/lucaorio/sketch-styles-generator) 由 **Luca Orio** 制作。

@@ -6,58 +6,56 @@
   "main": "dist/code.js",
   "ui": "dist/ui.html",
   "menu": [
-
     {
-      "name": "Extract Styles",
+      "name": "提取样式",
       "command": "extract-all-styles"
     },
     {
       "separator": true
     },
     {
-      "name": "Generate Styles",
+      "name": "生成样式",
       "command": "generate-all-styles"
     },
     {
       "separator": true
     },
     {
-      "name": "Apply Styles",
+      "name": "应用样式",
       "command": "apply-all-styles"
     },
     {
-      "name": "Detach Styles",
+      "name": "分离样式",
       "command": "detach-all-styles"
     },
-
     {
-      "name": "Remove Styles",
+      "name": "移除样式",
       "menu": [
         {
-          "name": "All Types",
+          "name": "所有类型",
           "command": "remove-all-styles"
         },
         {
           "separator": true
         },
         {
-          "name": "By Fill Type",
+          "name": "按填充类型",
           "command": "remove-fill-styles"
         },
         {
-          "name": "By Stroke Type",
+          "name": "按描边类型",
           "command": "remove-stroke-styles"
         },
         {
-          "name": "By Text Type",
+          "name": "按文本类型",
           "command": "remove-text-styles"
         },
         {
-          "name": "By Effect Type",
+          "name": "按效果类型",
           "command": "remove-effect-styles"
         },
         {
-          "name": "By Grid Type",
+          "name": "按网格类型",
           "command": "remove-grid-styles"
         }
       ]
@@ -66,7 +64,7 @@
       "separator": true
     },
     {
-      "name": "Customize plugin",
+      "name": "自定义插件",
       "command": "customize-plugin"
     }
   ]

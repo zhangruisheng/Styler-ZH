@@ -111,59 +111,59 @@
 
 <main>
   <div>
-    <h2 class="caption">General</h2>
+    <h2 class="caption">通用设置</h2>
     <NumberField bind:value={uiSettings.notificationTimeout} step="1000">
-      <span slot="textfield-label">Notification duration</span>
-      <span slot="unit-measure">ms</span>
+      <span slot="textfield-label">通知持续时间</span>
+      <span slot="unit-measure">毫秒</span>
     </NumberField>
   </div>
 
   <div>
-    <h2 class="caption">Generate styles</h2>
+    <h2 class="caption">生成样式</h2>
     <Checkbox bind:checked={uiSettings.addPrevToDescription}>
-      <span slot="label">Show last style in description</span>
+      <span slot="label">在描述中显示最后一个样式</span>
     </Checkbox>
 
     <Checkbox bind:checked={uiSettings.updateUsingLocalStyles} show>
-      <span slot="label">Update using local styles</span>
+      <span slot="label">使用本地样式更新</span>
     </Checkbox>
 
     <Checkbox bind:checked={uiSettings.partialMatch} show>
-      <span slot="label">Extend name match</span>
+      <span slot="label">扩展名称匹配</span>
     </Checkbox>
 
     <Checkbox bind:checked={uiSettings.reverseLayers}>
-      <span slot="label">Reverse generation order</span>
+      <span slot="label">反向生成顺序</span>
     </Checkbox>
 
     <div class="helper">
       <Icon iconName={Warning} class="icon-container" />
       <span class="small">
-        Experimental features!
+        实验性功能！
         <br />
-        Sometimes, produces unexpected results...
+        有时会产生意想不到的结果...
       </span>
 
     </div>
   </div>
 
   <div>
-    <h2 class="caption">Extract Styles</h2>
+    <h2 class="caption">提取样式</h2>
     <NumberField bind:value={uiSettings.textsPerSection} iconName={IconText}>
-      <span slot="textfield-label">Texts per column</span>
-      <span slot="unit-measure">layers</span>
+      <span slot="textfield-label">每列文本数</span>
+      <span slot="unit-measure">图层</span>
     </NumberField>
 
     <NumberField bind:value={uiSettings.framesPerSection} iconName={IconFrame}>
-      <span slot="textfield-label">Frames per row</span>
-      <span slot="unit-measure">layers</span>
+      <span slot="textfield-label">每行框架数</span>
+      <span slot="unit-measure">图层</span>
     </NumberField>
   </div>
 
 </main>
 <footer>
-  <Button on:click={resetToDefault} variant="secondary" class="col">Reset to default</Button>
-  <Button on:click={saveSettings} class="col">Save settings</Button>
+  <Button on:click={resetToDefault} variant="secondary" class="col">重置为默认</Button>
+  <Button on:click={saveSettings} class="col">保存设置</Button>
 </footer>
 
 <svelte:window on:keydown={cancelModalUsingEscape} />

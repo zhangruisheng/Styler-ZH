@@ -4,7 +4,7 @@ import { Styler } from './styler';
 export const clientStorageKey = 'cachedSettings';
 
 export class Config {
-  // general
+  // 通用设置
   addPrevToDescription: boolean;
   framesPerSection: number;
   textsPerSection: number;
@@ -13,7 +13,7 @@ export class Config {
   partialMatch: boolean;
   reverseLayers: boolean;
 
-  // stylers
+  // 样式器
   texter: Styler;
   grider: Styler;
   filler: Styler;
@@ -25,7 +25,7 @@ export class Config {
 
   constructor(options = defaultSettings) {
     const {
-      // general
+      // 通用设置
       addPrevToDescription = defaultSettings.addPrevToDescription,
       framesPerSection = defaultSettings.framesPerSection,
       textsPerSection = defaultSettings.textsPerSection,
@@ -34,7 +34,7 @@ export class Config {
       partialMatch = defaultSettings.partialMatch,
       reverseLayers = defaultSettings.reverseLayers,
 
-      // stylers
+      // 样式器
       texterPrefix = defaultSettings.texterPrefix,
       texterSuffix = defaultSettings.texterSuffix,
       griderPrefix = defaultSettings.griderPrefix,
@@ -67,7 +67,7 @@ export class Config {
         'paragraphSpacing',
         'textCase',
         'textDecoration',
-        // added since types 1.62.0
+        // 自 types 1.62.0 起添加
         'leadingTrim',
         'listSpacing',
         'hangingPunctuation',
