@@ -7,14 +7,14 @@
   "ui": "dist/ui.html",
   "menu": [
     {
-      "name": "提取样式",
+      "name": "全部样式",
       "command": "extract-all-styles"
     },
     {
       "separator": true
     },
     {
-      "name": "生成样式",
+      "name": "创建样式",
       "command": "generate-all-styles"
     },
     {
@@ -25,37 +25,37 @@
       "command": "apply-all-styles"
     },
     {
-      "name": "分离样式",
+      "name": "移除样式",
       "command": "detach-all-styles"
     },
     {
-      "name": "移除样式",
+      "name": "按类型移除样式",
       "menu": [
         {
-          "name": "所有类型",
+          "name": "所有样式",
           "command": "remove-all-styles"
         },
         {
           "separator": true
         },
         {
-          "name": "按填充类型",
+          "name": "移除填充样式",
           "command": "remove-fill-styles"
         },
         {
-          "name": "按描边类型",
+          "name": "移除描边样式",
           "command": "remove-stroke-styles"
         },
         {
-          "name": "按文本类型",
+          "name": "移除文本样式",
           "command": "remove-text-styles"
         },
         {
-          "name": "按效果类型",
+          "name": "移除效果样式",
           "command": "remove-effect-styles"
         },
         {
-          "name": "按网格类型",
+          "name": "移除网格",
           "command": "remove-grid-styles"
         }
       ]
@@ -64,7 +64,7 @@
       "separator": true
     },
     {
-      "name": "自定义插件",
+      "name": "插件设定",
       "command": "customize-plugin"
     }
   ]
